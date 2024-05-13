@@ -217,7 +217,7 @@ public class DefaultLogger implements BuildLogger {
         if (Project.MSG_INFO <= msgOutputLevel
                 && !event.getTarget().getName().isEmpty()) {
             String msg = String.format("%n%s:", event.getTarget().getName());
-            printMessage(msg, out, event.getPriority());
+            printMessage(msg, out, Project.MSG_INFO);
             log(msg);
         }
     }
